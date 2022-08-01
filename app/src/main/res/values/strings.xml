@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Book App</string>
+    <string name="books_title">Judul Buku</string>
+    <string name="books_author">Penulis</string>
+    <string name="books_publisher">Penerbit</string>
+    <string name="books_pages">Jumlah Halaman</string>
+    <string name="books_genre">Genre</string>
+    <string name="book_description">Deskripsi Buku</string>
+    <string name="book_detail">Detail Buku</string>
+    <string name="share">Share</string>
+    <string name="book_cover">Cover Buku</string>
+    <string name="book_isbn">ISBN</string>
+    <string name="book_publish_date">Tanggal Terbit</string>
+    <string name="book_language">Bahasa</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_list">List</string>
+    <string name="action_grid">Grid</string>
+</resources>
