@@ -1,5 +1,6 @@
 package com.dicoding.bookapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.Menu
@@ -11,7 +12,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var rvBooks: RecyclerView
     private var list: ArrayList<Book> = arrayListOf()
-
     private fun initComponents() {
         rvBooks = findViewById(R.id.rv_books)
     }
@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         outState.putParcelable(STATE_MODE, stateMode)
     }
 
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
@@ -52,8 +51,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_profile -> {
-//            val profileIntent = Intent(this@MainActivity, ProfileActivity::class.java)
-//            startActivity(profileIntent)
+            val profileIntent = Intent(this@MainActivity, ProfileActivity::class.java)
+            startActivity(profileIntent)
             true
         }
         R.id.action_list -> {
@@ -64,9 +63,8 @@ class MainActivity : AppCompatActivity() {
             showRecyclerGrid()
             true
         }
-        else -> {
-            super.onOptionsItemSelected(item)
-        }
+        else -> super.onOptionsItemSelected(item)
+
     }
 
     private fun showRecyclerList() {

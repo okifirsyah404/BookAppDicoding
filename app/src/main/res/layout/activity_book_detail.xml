@@ -36,7 +36,6 @@
                     android:id="@+id/tv_item_title"
                     style="@style/TextTitle"
                     android:layout_marginBottom="16dp"
-                    android:maxLines="2"
                     tools:text="@string/books_title" />
 
                 <TextView
@@ -107,9 +106,9 @@
 
                 <TextView
                     android:id="@+id/tv_item_spec_subtitle"
-                    android:layout_weight="1"
                     style="@style/TextContent.Spec"
-                    tools:text="@string/books_title"/>
+                    android:layout_weight="1"
+                    tools:text="@string/books_title" />
 
             </TableRow>
 
@@ -127,7 +126,7 @@
                     android:id="@+id/tv_item_spec_author"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/books_author"/>
+                    tools:text="@string/books_author" />
 
             </TableRow>
 
@@ -145,7 +144,7 @@
                     android:id="@+id/tv_item_spec_isbn"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/book_isbn"/>
+                    tools:text="@string/book_isbn" />
 
             </TableRow>
 
@@ -163,7 +162,7 @@
                     android:id="@+id/tv_item_spec_genre"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/books_genre"/>
+                    tools:text="@string/books_genre" />
 
             </TableRow>
 
@@ -181,7 +180,7 @@
                     android:id="@+id/tv_item_spec_publisher"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/books_publisher"/>
+                    tools:text="@string/books_publisher" />
 
             </TableRow>
 
@@ -199,7 +198,7 @@
                     android:id="@+id/tv_item_spec_publish_date"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/book_publish_date"/>
+                    tools:text="@string/book_publish_date" />
 
             </TableRow>
 
@@ -217,7 +216,7 @@
                     android:id="@+id/tv_item_spec_pages"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/books_pages"/>
+                    tools:text="@string/books_pages" />
 
             </TableRow>
 
@@ -235,7 +234,7 @@
                     android:id="@+id/tv_item_spec_language"
                     style="@style/TextContent.Spec"
                     android:layout_weight="1"
-                    tools:text="@string/book_language"/>
+                    tools:text="@string/book_language" />
 
             </TableRow>
 

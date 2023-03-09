@@ -102,7 +102,7 @@ class BookDetailActivity : AppCompatActivity() {
 
         R.id.action_share -> {
             val shareIntent = Intent(Intent.ACTION_SEND).setType("text/plain")
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "${bookTitle} by $bookAuthor")
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "$bookTitle by $bookAuthor")
             startActivity(Intent.createChooser(shareIntent, "Bagikan Dengan..."))
             true
         }

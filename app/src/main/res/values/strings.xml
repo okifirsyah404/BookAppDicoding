@@ -15,4 +15,6 @@
     <string name="action_profile">Profile</string>
     <string name="action_list">List</string>
     <string name="action_grid">Grid</string>
+    <string name="profile_name">Oki Firdaus Syah Putra</string>
+    <string name="profile_email">okifirsyah404@gmail.com</string>
 </resources>

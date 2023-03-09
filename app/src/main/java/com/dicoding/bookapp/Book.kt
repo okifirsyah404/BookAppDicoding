@@ -15,7 +15,7 @@ data class Book(
     var description: String? = "",
     var cover: Int = 0,
     var language: String? = "",
-): Parcelable {
+) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -28,8 +28,7 @@ data class Book(
         parcel.readString(),
         parcel.readInt(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)

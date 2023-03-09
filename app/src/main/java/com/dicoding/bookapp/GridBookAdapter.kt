@@ -10,9 +10,12 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class GridBookAdapter(private val listBook: ArrayList<Book>): RecyclerView.Adapter<GridBookAdapter.GridViewHolder>() {
+class GridBookAdapter(private val listBook: ArrayList<Book>) :
+    RecyclerView.Adapter<GridBookAdapter.GridViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridViewHolder {
-        return GridViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_grid_book, parent, false))
+        return GridViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_grid_book, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {
@@ -30,9 +33,24 @@ class GridBookAdapter(private val listBook: ArrayList<Book>): RecyclerView.Adapt
         holder.tvAuthor.text = book.author
         holder.tvGenre.text = book.genre
 
-        holder.itemView.setOnClickListener{
-            val  intent = Intent(holder.itemView.context, BookDetailActivity::class.java)
-            intent.putExtra("extra_book", Book(book.title, book.subtitle, book.author, book.genre, book.pages, book.publisher, book.isbn, book.publishDate, book.description, book.cover, book.language))
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, BookDetailActivity::class.java)
+            intent.putExtra(
+                "extra_book",
+                Book(
+                    book.title,
+                    book.subtitle,
+                    book.author,
+                    book.genre,
+                    book.pages,
+                    book.publisher,
+                    book.isbn,
+                    book.publishDate,
+                    book.description,
+                    book.cover,
+                    book.language
+                )
+            )
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
 
@@ -40,10 +58,10 @@ class GridBookAdapter(private val listBook: ArrayList<Book>): RecyclerView.Adapt
 
     inner class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var tvTitle: TextView = itemView.findViewById(R.id.tv_item_title)
-        var tvAuthor: TextView = itemView.findViewById(R.id.tv_item_author)
-        var tvGenre: TextView = itemView.findViewById(R.id.tv_item_genre)
-        var imgBookCover: ImageView = itemView.findViewById(R.id.img_item_cover)
+        var tvTitle: TextView = itemView.findViewById(R.id.tv_item_title) as TextView
+        var tvAuthor: TextView = itemView.findViewById(R.id.tv_item_author) as TextView
+        var tvGenre: TextView = itemView.findViewById(R.id.tv_item_genre) as TextView
+        var imgBookCover: ImageView = itemView.findViewById(R.id.img_item_cover) as ImageView
 
     }
 }
